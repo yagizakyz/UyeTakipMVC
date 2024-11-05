@@ -1,0 +1,39 @@
+﻿@model UyeTakipMVC.Models.RolMenuYetkiClass
+@{
+    ViewData["Title"] = "GetRoleYetki";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Yetki Bilgileri</h1>
+<br />
+@using (Html.BeginForm("UpdateRoleYetki", "Yetki", FormMethod.Post))
+{
+    @Html.Label("Yetki ID")
+    @Html.TextBoxFor(x => x.rmy_id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Kullanıcı Ad")
+    @Html.DropDownListFor(x => x.rol_id, (List<SelectListItem>)ViewBag.role, new { @class = "form-control" })
+    <br />
+    @Html.Label("Menü Ad")
+    @Html.DropDownListFor(x => x.menu_id, (List<SelectListItem>)ViewBag.menu, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ekleme")
+    @Html.CheckBoxFor(x => x.ekleme, new { @class = "form-control" })
+    <br />
+    @Html.Label("Okuma")
+    @Html.CheckBoxFor(x => x.okuma, new { @class = "form-control" })
+    <br />
+    @Html.Label("Güncelleme")
+    @Html.CheckBoxFor(x => x.guncelleme, new { @class = "form-control" })
+    <br />
+    @Html.Label("Silme")
+    @Html.CheckBoxFor(x => x.silme, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Kaydet</button>
+    <a href="/Yetki/RoleYetki">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

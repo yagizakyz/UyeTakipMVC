@@ -1,0 +1,21 @@
+﻿@model UyeTakipMVC.Models.RolClass
+@{
+    ViewData["Title"] = "NewRole";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Rol Ekle</h1>
+<br />
+@using (Html.BeginForm("NewRole", "Rol", FormMethod.Post))
+{
+    @Html.Label("Rol Ad")
+    @Html.TextBoxFor(x => x.rol_ad, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Ekle</button>
+    <a href="/Ulke/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

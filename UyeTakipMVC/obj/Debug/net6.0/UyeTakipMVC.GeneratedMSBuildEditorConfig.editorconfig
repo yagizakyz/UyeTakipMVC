@@ -1,0 +1,195 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = UyeTakipMVC
+build_property.RootNamespace = UyeTakipMVC
+build_property.ProjectDir = C:\Users\akyz6\OneDrive\Masaüstü\Dosyalar\Kodlamalar\Mvc\UyeTakipMVC\UyeTakipMVC\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\akyz6\OneDrive\Masaüstü\Dosyalar\Kodlamalar\Mvc\UyeTakipMVC\UyeTakipMVC
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Address/GetAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc1xHZXRBZGRyZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Address/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Address/NewAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkcmVzc1xOZXdBZGRyZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Belde/GetBelde.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVsZGVcR2V0QmVsZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Belde/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVsZGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Belde/NewBelde.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVsZGVcTmV3QmVsZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Ilce/GetIlce.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWxjZVxHZXRJbGNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Ilce/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWxjZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Ilce/NewIlce.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWxjZVxOZXdJbGNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/KullaniciRol/GetKr.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpUm9sXEdldEtyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/KullaniciRol/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpUm9sXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/KullaniciRol/NewKr.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpUm9sXE5ld0tyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Kullanici/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Kullanici/NewKullanici.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXE5ld0t1bGxhbmljaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Login/ServerInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU2VydmVySW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Parametre/GetParametre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldHJlXEdldFBhcmFtZXRyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Parametre/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldHJlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Parametre/NewParametre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldHJlXE5ld1BhcmFtZXRyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Rol/GetRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXEdldFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Rol/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Rol/NewRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXE5ld1JvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Sehir/GetCity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VoaXJcR2V0Q2l0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Sehir/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VoaXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Sehir/NewCity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VoaXJcTmV3Q2l0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Shared/_Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Ulke/GetCountry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWxrZVxHZXRDb3VudHJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Ulke/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWxrZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Ulke/NewCountry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWxrZVxOZXdDb3VudHJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Uye/GetAddressDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllXEdldEFkZHJlc3NEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Uye/GetUye.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllXEdldFV5ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Uye/IdCardPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllXElkQ2FyZFBERi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Uye/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Uye/NewUye.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllXE5ld1V5ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Uye/SendMail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllXFNlbmRNYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Yetki/GetRoleYetki.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWV0a2lcR2V0Um9sZVlldGtpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Yetki/GetYetki.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWV0a2lcR2V0WWV0a2kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Yetki/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWV0a2lcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Yetki/NewRoleYetki.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWV0a2lcTmV3Um9sZVlldGtpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Yetki/NewYetki.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWV0a2lcTmV3WWV0a2kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/akyz6/OneDrive/Masaüstü/Dosyalar/Kodlamalar/Mvc/UyeTakipMVC/UyeTakipMVC/Views/Yetki/RoleYetki.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWV0a2lcUm9sZVlldGtpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

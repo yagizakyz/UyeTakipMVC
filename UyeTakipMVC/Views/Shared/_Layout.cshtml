@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+    string name = Context.Session.GetString("kullaniciAd");
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Üye Takip</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body style="background-color:white; overflow:scroll">
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none; overflow: hidden;" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large"
+                onclick="w3_close()">
+            Kapat &times;
+        </button>
+        <a href="/Uye/Index" class="w3-bar-item w3-button">Üyeler</a>
+        <a href="/Address/Index" class="w3-bar-item w3-button">Adresler</a>
+        <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+        Tanımlar <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="demoAcc" class="w3-hide w3-white w3-card">
+            <a class="w3-bar-item w3-button" href="/Ulke/Index">Ülke</a>
+            <a class="w3-bar-item w3-button" href="/Sehir/Index">Şehir</a>
+            <a class="w3-bar-item w3-button" href="/Ilce/Index">İlçe</a>
+            <a class="w3-bar-item w3-button" href="/Belde/Index">Belde</a>
+            <a class="w3-bar-item w3-button" href="/Rol/Index">Roller</a>
+            <a class="w3-bar-item w3-button" href="/KullaniciRol/Index">Kullanıcı Rolleri</a>
+            <a class="w3-bar-item w3-button" href="/Yetki/Index">Yetki Tanıma</a>
+        </div>
+        <a href="/Parametre/Index" class="w3-bar-item w3-button">Parametreler</a>
+        <a href="/Kullanici/Index" class="w3-bar-item w3-button">Kullanıcılar</a>
+        <a href="/Login/LogOut" class="w3-bar-item w3-button">Çıkış Yap</a>
+        <br />
+        <p class="w3-bar-item w3-button">@name</p>
+    </div>
+
+    <div>
+        <button class="w3-button w3-white w3-large" onclick="w3_open()">&#9776; Üye Takip</button>
+    </div>
+
+    <!-- Uyarı mesajları için -->
+    @await Component.InvokeAsync("NToastNotify")
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+        function myAccFunc() {
+            var x = document.getElementById("demoAcc");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-green";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-green", "");
+            }
+        }
+
+        function myDropFunc() {
+            var x = document.getElementById("demoDrop");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-green";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-green", "");
+            }
+        }
+    </script>
+</body>
+</html>

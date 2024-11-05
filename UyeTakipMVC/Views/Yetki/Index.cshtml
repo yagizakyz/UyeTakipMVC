@@ -1,0 +1,51 @@
+﻿@model IEnumerable<UyeTakipMVC.Models.KullaniciMenuYetkiClass>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        #right {
+            position: absolute;
+            right: 80px;
+        }
+    </style>
+</head>
+
+<h3>Kullanıcı Yetkilendirme Sayfası</h3>
+<br />
+<div style="float: left">
+    <a href="/Yetki/NewYetki" class="btn btn-primary">Yeni Yetki Tanımla </a>
+    <a href="/Yetki/RoleYetki" class="btn btn-primary" id="right">Role Göre Yetki Tanımlama</a>
+</div>
+<br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Yetki ID</th>
+            <th>Kullanıcı Ad</th>
+            <th>Menü Ad</th>
+            <th>Ekleme</th>
+            <th>Okuma</th>
+            <th>Güncelleme</th>
+            <th>Silme</th>
+            <th>Düzenle/Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.kmy_id</td>
+                <td>@item.Kullanici.kullanici_ad</td>
+                <td>@item.Menu.menu_ad</td>
+                <td>@item.ekleme</td>
+                <td>@item.okuma</td>
+                <td>@item.guncelleme</td>
+                <td>@item.silme</td>
+                <td> <a href="/Yetki/GetYetki/@item.kmy_id" class="btn btn-success"><span class="glyphicon glyphicon-edit" title="Düzenle"></span></a> <a href="/Yetki/DeleteYetki/@item.kmy_id" class="btn btn-danger" onclick="return confirm('Silmek istediğine emin misin?')" title="Sil"><span class="glyphicon glyphicon-remove"></span></a> </td>
+            </tr>
+        }
+    </tbody>
+</table>

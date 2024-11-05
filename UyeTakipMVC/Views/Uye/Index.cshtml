@@ -1,0 +1,51 @@
+﻿@model IEnumerable<UyeTakipMVC.Models.UyeClass>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        .hidetext { -webkit-text-security: disc; /* Default */ }
+
+        #right {
+          position: absolute;
+          right: 80px;
+        }
+    </style>
+</head>
+<h1>Üye Sayfası</h1>
+<div style="float: left">
+    <a href="/Uye/NewUye" class="btn btn-primary">Yeni Üye Ekle </a>
+    <a href="/Uye/ExportToExcel" class="btn btn-success" id="right">Excel Olarak İndir</a>
+</div>
+<br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>TCKN</th>
+            <th>Üye Ad</th>
+            <th>Üye Soyad</th>
+            <th>Ünvan</th>
+            <th>Telefon Numarası</th>
+            <th>E-Posta</th>
+            <th>Şifre</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.tckn</td>
+                <td>@item.ad</td>
+                <td>@item.soyad</td>
+                <td>@item.unvan</td>
+                <td>@item.telefon_no</td>
+                <td><a href="/Uye/SendMail/@item.tckn" class="btn btn-secondary"><span class="glyphicon glyphicon-comment"></span> @item.eposta</a></td>
+                <td class="hidetext">@item.sifre</td>
+                <td><a href="/Uye/GetAddressDetail/@item.tckn" class="btn btn-warning" title="Adresleri"><span class="glyphicon glyphicon-home"></span></a> <a href="/Uye/GetUye/@item.tckn" class="btn btn-success"><span class="glyphicon glyphicon-edit" title="Düzenle"></span></a> <a href="/Uye/DeleteUye/@item.tckn" class="btn btn-danger" onclick="return confirm('Silmek istediğine emin misin?')"><span class="glyphicon glyphicon-remove" title="Sil"></span></a> <a href="/Uye/IdCardPDF/@item.tckn" class="btn btn-primary" title="Üye Kart"><span class="glyphicon glyphicon-user"></span></a></td>
+            </tr>
+        }
+    </tbody>
+</table>

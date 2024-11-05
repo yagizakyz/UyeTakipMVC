@@ -1,0 +1,37 @@
+﻿@model IEnumerable<UyeTakipMVC.Models.RolClass>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        #right {
+            position: absolute;
+            right: 80px;
+        }
+    </style>
+</head>
+
+<h3>Roller</h3>
+<a href="/Rol/NewRole" class="btn btn-primary">Yeni Rol Ekle </a>
+<br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Rol ID</th>
+            <th>Rol Ad</th>
+            <th>Düzenle/Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.rol_id</td>
+                <td>@item.rol_ad</td>
+                <td> <a href="/Rol/GetRole/@item.rol_id" class="btn btn-success"><span class="glyphicon glyphicon-edit" title="Düzenle"></span></a> <a href="/Rol/DeleteRole/@item.rol_id" class="btn btn-danger"onclick="return confirm('Silmek istediğine emin misin?')" title="Sil"><span class="glyphicon glyphicon-remove"></span></a></td>
+            </tr>
+        }
+    </tbody>
+</table>

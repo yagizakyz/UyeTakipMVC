@@ -1,0 +1,133 @@
+﻿@model UyeTakipMVC.Models.AdresClass
+@{
+    ViewData["Title"] = "GetAddress";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Adres Bilgileri</h1>
+
+@using (Html.BeginForm("UpdateAddress", "Address", FormMethod.Post))
+{
+    <div style="display: flex;">
+        <div style="float: left; margin: 5px;">
+            @Html.Label("Adres ID")
+            @Html.TextBoxFor(x => x.adres_id, new { @class = "form-control", @readonly = "readonly", style = "width: 115px;" })
+        </div>
+        <div style="margin: 5px;">
+            @Html.Label("Üye TCKN")
+            @Html.DropDownListFor(x => x.uye_tckn, (List<SelectListItem>)ViewBag.uye, new { @class = "form-control", style = "width: 270px;" })
+        </div>
+    </div>
+    <br />
+
+    <b style="margin: 5px;">Adres Türü</b>
+    @Html.DropDownListFor(x => x.adres_tur, (List<SelectListItem>)ViewBag.at, "Adres Türü Seçiniz", new { @class = "form-control", style="margin: 5px;" })
+
+    <div style="display: flex;">
+        <div style="float: left; margin: 5px;">
+            @Html.Label("Ülke")
+            @Html.DropDownListFor(x => x.ulke_id, (List<SelectListItem>)ViewBag.ulke, "Ülke Seçiniz", new { id = "CountryId", @class = "form-control", style = "width: 170px;" })
+        </div>
+        <div style="margin: 5px;">
+            @Html.Label("Şehir")
+            @Html.DropDownListFor(x => x.sehir_id, (List<SelectListItem>)ViewBag.sehir, "Şehir Seçiniz", new { id = "CityId", @class = "form-control", style = "width: 170px;" })
+        </div>
+    </div>
+    <br />
+    <div style="float: left; margin: 5px;">
+        @Html.Label("İlçe")
+        @Html.DropDownListFor(x => x.ilce_id, (List<SelectListItem>)ViewBag.ilce, "İlçe Seçiniz", new { id = "IlceId", @class = "form-control", style = "width: 170px;" })
+    </div>
+    <div style="margin: 5px;">
+        @Html.Label("Belde")
+        @Html.DropDownListFor(x => x.belde_id, (List<SelectListItem>)ViewBag.belde, "Belde Seçiniz", new { id = "BeldeId", @class = "form-control", style = "width: 170px;" })
+    </div>
+    <br />
+    @Html.Label("Mahalle")
+    @Html.TextBoxFor(x => x.mahalle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Bulvar")
+    @Html.TextBoxFor(x => x.bulvar, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cadde")
+    @Html.TextBoxFor(x => x.cadde, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sokak")
+    @Html.TextBoxFor(x => x.sokak, new { @class = "form-control" })
+    <br />
+    @Html.Label("Apartman")
+    @Html.TextBoxFor(x => x.apartman, new { @class = "form-control" })
+    <div style="float: left; margin: 5px;">
+        @Html.Label("Dış Kapı No")
+        @Html.TextBoxFor(x => x.dis_kapi_no, new { @class = "form-control", style = "width: 80px;" })
+    </div>
+    <div style="float: left; margin: 5px;">
+        @Html.Label("İç Kapı No")
+        @Html.TextBoxFor(x => x.ic_kapi_no, new { @class = "form-control", style = "width: 80px;" })
+    </div>
+    <div style="margin: 5px;">
+        @Html.Label("Posta Kodu")
+        @Html.TextBoxFor(x => x.posta_kodu, new { @class = "form-control", style = "width: 80px;" })
+    </div>
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Kaydet</button>
+    <a href="/Address/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#CountryId").change(function () {
+            $.ajax({
+                type: "GET",
+                url: "/Address/GetCities",
+                data: { countryId: $("#CountryId").val() },
+                success: function (data) {
+                    $("#CityId").empty();
+                    $("#CityId").append("<option value=''>Şehir Seçiniz</option>");
+                    $.each(data, function (index, row) {
+                        $("#CityId").append("<option value='" + row.sehir_id + "'>" + row.sehir_ad + "</option>");
+                    });
+                }
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        $("#CityId").change(function () {
+            $.ajax({
+                type: "GET",
+                url: "/Address/GetIlce",
+                data: { cityId: $("#CityId").val() },
+                success: function (data) {
+                    $("#IlceId").empty();
+                    $("#IlceId").append("<option value=''>İlçe Seçiniz</option>");
+                    $.each(data, function (index, row) {
+                        $("#IlceId").append("<option value='" + row.ilce_id + "'>" + row.ilce_ad + "</option>");
+                    });
+                }
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        $("#IlceId").change(function () {
+            $.ajax({
+                type: "GET",
+                url: "/Address/GetBelde",
+                data: { ilceId: $("#IlceId").val() },
+                success: function (data) {
+                    $("#BeldeId").empty();
+                    $("#BeldeId").append("<option value=''>Belde Seçiniz</option>");
+                    $.each(data, function (index, row) {
+                        $("#BeldeId").append("<option value='" + row.belde_id + "'>" + row.belde_ad + "</option>");
+                    });
+                }
+            });
+        });
+    });
+</script>

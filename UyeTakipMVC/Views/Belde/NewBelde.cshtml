@@ -1,0 +1,24 @@
+﻿@model UyeTakipMVC.Models.BeldeClass
+@{
+    ViewData["Title"] = "NewBelde";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Belde Ekle</h1>
+<br />
+@using (Html.BeginForm("NewBelde", "Belde", FormMethod.Post))
+{
+    @Html.Label("Belde Ad")
+    @Html.TextBoxFor(x => x.belde_ad, new { @class = "form-control" })    
+    <br />
+    @Html.Label("İlçe")
+    @Html.DropDownListFor(x => x.ilce_id, (List<SelectListItem>)ViewBag.ilce, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Ekle</button>
+    <a href="/Belde/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

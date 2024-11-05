@@ -1,0 +1,30 @@
+﻿@model UyeTakipMVC.Models.ParametreClass
+@{
+    ViewData["Title"] = "GetParametre";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Parametre Bilgileri</h1>
+<br />
+@using (Html.BeginForm("UpdateParametre", "Parametre", FormMethod.Post))
+{
+    @Html.Label("Parametre ID")
+    @Html.TextBoxFor(x => x.parametre_id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Kullanıcı ID")
+    @Html.TextBoxFor(x => x.kullanici_id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Parametre Ad")
+    @Html.DropDownListFor(x => x.parametre_ad_id, (List<SelectListItem>)ViewBag.pa, new { @class = "form-control" })
+    <br />
+    @Html.Label("Parametre İçeriği")
+    @Html.TextBoxFor(x => x.parametre_icerigi, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Kaydet</button>
+    <a href="/Parametre/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

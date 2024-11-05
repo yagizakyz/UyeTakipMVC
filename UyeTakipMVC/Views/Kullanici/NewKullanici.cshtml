@@ -1,0 +1,27 @@
+﻿@model UyeTakipMVC.Models.MyTuple
+@{
+    ViewData["Title"] = "NewKullanici";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ülke Ekle</h1>
+<br />
+@using (Html.BeginForm("NewKullanici", "Kullanici", FormMethod.Post))
+{
+    @Html.Label("Kullanıcı Ad")
+    @Html.TextBoxFor(x => x.kullanici_ad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.sifre, new { @class = "form-control" })
+    <br />
+    @Html.Label("Rol")
+    @Html.DropDownListFor(x => x.rol_id, (List<SelectListItem>)ViewBag.role, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Ekle</button>
+    <a href="/Kullanici/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<UyeTakipMVC.Models.IlceClass>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        #right {
+            position: absolute;
+            right: 80px;
+        }
+    </style>
+</head>
+
+<h3>İlçeler</h3>
+<div style="float: left">
+    <a href="/Ilce/NewIlce" class="btn btn-primary">Yeni İlçe Ekle </a>
+    <a href="/Ilce/ExportToExcel" class="btn btn-success" id="right">Excel Olarak İndir</a>
+</div>
+<br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>İlçe ID</th>
+            <th>İlçe Ad</th>
+            <th>Şehir Ad</th>
+            <th>Düzenle/Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ilce_id</td>
+                <td>@item.ilce_ad</td>
+                <td>@item.Sehir.sehir_ad</td>
+                <td> <a href="/Ilce/GetIlce/@item.sehir_id" class="btn btn-success" title="Düzenle"><span class="glyphicon glyphicon-edit"></span></a> <a href="/Ilce/DeleteIlce/@item.sehir_id" class="btn btn-danger" onclick="return confirm('Silmek istediğine emin misin?')" title="Sil"><span class="glyphicon glyphicon-remove"></span></a> </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,27 @@
+﻿@model UyeTakipMVC.Models.IlceClass
+@{
+    ViewData["Title"] = "GetIlce";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>İlçe Bilgileri</h1>
+<br />
+@using (Html.BeginForm("UpdateIlce", "Ilce", FormMethod.Post))
+{
+    @Html.Label("İlçe ID")
+    @Html.TextBoxFor(x => x.ilce_id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("İlçe Ad")
+    @Html.TextBoxFor(x => x.ilce_ad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şehir")
+    @Html.DropDownListFor(x => x.sehir_id, (List<SelectListItem>)ViewBag.sehir, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Kaydet</button>
+    <a href="/Ilce/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,37 @@
+﻿@model UyeTakipMVC.Models.EmailClass
+@{
+    ViewData["Title"] = "SendMail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("SendMail", "Uye", FormMethod.Post))
+{
+    <div style="float: left; margin: 5px;">
+        @Html.Label("E-Posta Parametresi")
+        @Html.DropDownListFor(x => x.FromEmail, (List<SelectListItem>)ViewBag.eposta, "Parametre Seçin", new { @class = "form-control", style = "width: 170px;" })
+    </div>
+    <div style="">
+        @Html.Label("Şifre Parametresi")
+        @Html.DropDownListFor(x => x.FromPassword, (List<SelectListItem>)ViewBag.sifre, "Parametre Seçin", new { @class = "form-control", style = "width: 170px;" })
+    </div>
+    <br />
+    @Html.Label("Gönderilecek E-Posta")
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    <div style="margin: 5px;">
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+    </div>
+    <div style="margin: 5px;">
+        @Html.Label("İçerik")
+        @Html.TextAreaFor(x => x.Body, new { @class = "form-control" })
+    </div>
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">mail Gönder</button>
+    <a href="/Uye/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,24 @@
+﻿@model UyeTakipMVC.Models.KullaniciClass
+@{
+    ViewData["Title"] = "Index";
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+}
+
+<div align="center" style="margin: 50px;">
+    <h1 align="center">Üye Takip Paneli</h1>
+    @using (Html.BeginForm("LoginUser", "Login", FormMethod.Post))
+    {
+        <br />
+        <br />
+        <br />
+        @Html.Label("Kullanıcı Adı")
+        @Html.TextBoxFor(x => x.kullanici_ad, new { @class = "form-control", style = "width: 210px;" })
+        <br />
+        @Html.Label("Şifre")
+        @Html.PasswordFor(x => x.sifre, new { @class = "form-control", style = "width: 210px;" })
+        <br />
+        <button class="btn btn-info" style="background-color:red; color:white">Giriş Yap</button>
+    }
+    @ViewBag.wrong
+    <a href="/Login/ServerInfo" class="btn btn-primary" style="background-color:red;">Server Bilgileri Ekle </a>
+</div>

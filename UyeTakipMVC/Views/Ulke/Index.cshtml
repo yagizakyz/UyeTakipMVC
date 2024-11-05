@@ -1,0 +1,40 @@
+﻿@model IEnumerable<UyeTakipMVC.Models.UlkeClass>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        #right {
+            position: absolute;
+            right: 80px;
+        }
+    </style>
+</head>
+
+<h3>Ülkeler</h3>
+<div style="float: left">
+    <a href="/Ulke/NewCountry" class="btn btn-primary">Yeni Ülke Ekle </a>
+    <a href="/Ulke/ExportToExcel" class="btn btn-success" id="right">Excel Olarak İndir</a>
+</div>
+<br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Ülke ID</th>
+            <th>Ülke Ad</th>
+            <th>Düzenle/Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ulke_id</td>
+            <td>@item.ulke_ad</td>
+            <td> <a href="/Ulke/GetCountry/@item.ulke_id" class="btn btn-success"><span class="glyphicon glyphicon-edit" title="Düzenle"></span></a> <a href="/Ulke/DeleteCountry/@item.ulke_id" class="btn btn-danger"onclick="return confirm('Silmek istediğine emin misin?')" title="Sil"><span class="glyphicon glyphicon-remove"></span></a></td>
+        </tr>
+    }
+    </tbody>
+</table>

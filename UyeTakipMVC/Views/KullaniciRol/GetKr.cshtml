@@ -1,0 +1,27 @@
+﻿@model UyeTakipMVC.Models.KullaniciRolClass
+@{
+    ViewData["Title"] = "GetKr";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Kullanıcıya Rol Tanımlama</h1>
+<br />
+@using (Html.BeginForm("UpdateKr", "KullaniciRol", FormMethod.Post))
+{
+    @Html.Label("Kullanıcı Rol ID")
+    @Html.TextBoxFor(x => x.kr_id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Kullanıcı Ad")
+    @Html.DropDownListFor(x => x.kullanici_id, (List<SelectListItem>)ViewBag.kullanici, new { @class = "form-control" })
+    <br />
+    @Html.Label("Rol Ad")
+    @Html.DropDownListFor(x => x.rol_id, (List<SelectListItem>)ViewBag.role, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Ekle</button>
+    <a href="/KullaniciRol/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

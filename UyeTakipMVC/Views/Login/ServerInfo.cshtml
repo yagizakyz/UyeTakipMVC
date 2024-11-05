@@ -1,0 +1,31 @@
+﻿@model UyeTakipMVC.Models.ServerInformation
+@{
+    Layout = null;
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+}
+
+<div align="center" style="margin: 50px;">
+    <h1 align="center">Server Bilgilerini Girin</h1>
+    @using (Html.BeginForm("ServerInfo", "Login", FormMethod.Post))
+    {
+        <br />
+        <br />
+        <br />
+        @Html.Label("Server")
+        @Html.TextBoxFor(x => x.server, new { @class = "form-control", style = "width: 210px;" })
+        <br />
+        @Html.Label("Veritabanı Adı")
+        @Html.TextBoxFor(x => x.dbName, new { @class = "form-control", style = "width: 210px;" })
+        <br />
+        @Html.Label("Kullanıcı Adı")
+        @Html.TextBoxFor(x => x.userId, new { @class = "form-control", style = "width: 210px;" })
+        <br />
+        @Html.Label("Şifre")
+        @Html.TextBoxFor(x => x.password, new { @class = "form-control", style = "width: 210px;" })
+        <br />
+        <button class="btn btn-info" style="background-color:red; color:white">Kaydet</button>
+        <br />
+        <a href="/Login/Index" class="btn btn-info">Geri Dön</a>
+    }
+</div>

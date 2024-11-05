@@ -1,0 +1,24 @@
+﻿@model UyeTakipMVC.Models.UlkeClass
+@{
+    ViewData["Title"] = "GetCountry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ülke Bilgileri</h1>
+<br />
+@using (Html.BeginForm("UpdateCountry", "Ulke", FormMethod.Post))
+{
+    @Html.Label("Ülke ID")
+    @Html.TextBoxFor(x => x.ulke_id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Ülke Ad")
+    @Html.TextBoxFor(x => x.ulke_ad, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Kaydet</button>
+    <a href="/Ulke/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

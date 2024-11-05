@@ -1,0 +1,70 @@
+﻿@model UyeTakipMVC.Models.UyeClass
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        #right {
+            position: absolute;
+            right: 80px;
+        }
+    </style>
+</head>
+
+<h1>Adresler</h1>
+<div style="float: left">
+    <a href="/Address/NewAddress" class="btn btn-primary">Yeni Adres Ekle </a>
+    <a href="/Address/ExportToExcel" class="btn btn-success" id="right">Excel Olarak İndir</a>
+</div>
+<br />
+<table class="table table-bordered table-striped" style="width:100%; overflow:scroll;">
+    <thead>
+        <tr>
+            <th>Adres ID</th>
+            <th>TCKN</th>
+            <th>Üye Ad</th>
+            <th>Üye Soyad</th>
+            <th>Adres Türü</th>
+            <th>Ülke</th>
+            <th>Şehir</th>
+            <th>İlçe</th>
+            <th>Belde</th>
+            <th>Mahalle</th>
+            <th>Bulvar</th>
+            <th>Cadde</th>
+            <th>Sokak</th>
+            <th>Apartman</th>
+            <th>Dış Kapı No</th>
+            <th>İç Kapı No</th>
+            <th>Posta Kodu</th>
+            <th>Düzenle/Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AdresC)
+        {
+            <tr>
+                <td>@item.adres_id</td>
+                <td>@item.uye_tckn</td>
+                <td>@item.Uye.ad</td>
+                <td>@item.Uye.soyad</td>
+                <td>@item.adres_tur</td>
+                <td>@item.Ulke.ulke_ad</td>
+                <td>@item.Sehir.sehir_ad</td>
+                <td>@item.Ilce.ilce_ad</td>
+                <td>@item.Belde.belde_ad</td>
+                <td>@item.mahalle</td>
+                <td>@item.bulvar</td>
+                <td>@item.cadde</td>
+                <td>@item.sokak</td>
+                <td>@item.apartman</td>
+                <td>@item.dis_kapi_no</td>
+                <td>@item.ic_kapi_no</td>
+                <td>@item.posta_kodu</td>
+                <td><a href="/Address/GetAddress/@item.adres_id" class="btn btn-success" title="Düzenle"><span class="glyphicon glyphicon-edit"></span></a> <a href="/Address/DeleteAddress/@item.adres_id" class="btn btn-danger" onclick="return confirm('Silmek istediğine emin misin?')" title="Sil"><span class="glyphicon glyphicon-remove"></span></a> </td>
+            </tr>
+        }
+    </tbody>
+</table>

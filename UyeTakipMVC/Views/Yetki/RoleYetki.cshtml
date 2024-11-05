@@ -1,0 +1,48 @@
+﻿@model IEnumerable<UyeTakipMVC.Models.RolMenuYetkiClass>
+@{
+    ViewData["Title"] = "RoleYetki";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        #right {
+            position: absolute;
+            right: 80px;
+        }
+    </style>
+</head>
+
+<h3>Rol Yetkilendirme Sayfası</h3>
+<br />
+<a href="/Yetki/NewRoleYetki" class="btn btn-primary">Yeni Yetki Tanımla </a>
+<br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Yetki ID</th>
+            <th>Rol Ad</th>
+            <th>Menü Ad</th>
+            <th>Ekleme</th>
+            <th>Okuma</th>
+            <th>Güncelleme</th>
+            <th>Silme</th>
+            <th>Düzenle/Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.rmy_id</td>
+                <td>@item.Rol.rol_ad</td>
+                <td>@item.Menu.menu_ad</td>
+                <td>@item.ekleme</td>
+                <td>@item.okuma</td>
+                <td>@item.guncelleme</td>
+                <td>@item.silme</td>
+                <td> <a href="/Yetki/GetRoleYetki/@item.rmy_id" class="btn btn-success"><span class="glyphicon glyphicon-edit" title="Düzenle"></span></a> <a href="/Yetki/DeleteRoleYetki/@item.rmy_id" class="btn btn-danger" onclick="return confirm('Silmek istediğine emin misin?')" title="Sil"><span class="glyphicon glyphicon-remove"></span></a> </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,48 @@
+﻿@model UyeTakipMVC.Models.UyeClass
+@{
+    ViewData["Title"] = "GetUye";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Üye Bilgileri</h1>
+<br />
+@using (Html.BeginForm("UpdateUye", "Uye", FormMethod.Post))
+{
+    @Html.Label("Üye TCKN")
+    @Html.TextBoxFor(x => x.tckn, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <div style="float: left; margin: 5px;">
+        @Html.Label("Üye Ad")
+        @Html.TextBoxFor(x => x.ad, new { @class = "form-control", style = "width: 350px;" })
+    </div>
+    <div style="margin: 5px;">
+        @Html.Label("Üye Soyad")
+        @Html.TextBoxFor(x => x.soyad, new { @class = "form-control", style = "width: 350px;" })
+    </div>
+    <br />
+    <div style="float: left; margin: 5px;">
+        @Html.Label("Ünvan")
+        @Html.TextBoxFor(x => x.unvan, new { @class = "form-control", style = "width: 350px;" })
+    </div>
+    <div style="margin: 5px;">
+        @Html.Label("Telefon No")
+        @Html.TextBoxFor(x => x.telefon_no, new { @class = "form-control", style = "width: 350px;" })
+    </div>
+    <br />
+    <div style="float: left; margin: 5px;">
+        @Html.Label("E-Posta")
+        @Html.TextBoxFor(x => x.eposta, new { @class = "form-control", style = "width: 350px;" })
+    </div>
+    <div style="margin: 5px;">
+        @Html.Label("Şifre")
+        @Html.TextBoxFor(x => x.sifre, new { @class = "form-control", style = "width: 350px;", @type = "password" })
+    </div>
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Kaydet</button>
+    <a href="/Uye/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

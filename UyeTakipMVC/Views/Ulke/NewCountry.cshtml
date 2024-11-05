@@ -1,0 +1,21 @@
+﻿@model UyeTakipMVC.Models.UlkeClass
+@{
+    ViewData["Title"] = "NewCountry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ülke Ekle</h1>
+<br />
+@using (Html.BeginForm("NewCountry", "Ulke", FormMethod.Post))
+{
+    @Html.Label("Ülke Ad")
+    @Html.TextBoxFor(x => x.ulke_ad, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Ekle</button>
+    <a href="/Ulke/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

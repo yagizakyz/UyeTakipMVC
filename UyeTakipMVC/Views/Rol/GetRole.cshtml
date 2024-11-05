@@ -1,0 +1,24 @@
+﻿@model UyeTakipMVC.Models.RolClass
+@{
+    ViewData["Title"] = "GetRole";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ülke Bilgileri</h1>
+<br />
+@using (Html.BeginForm("UpdateRole", "Rol", FormMethod.Post))
+{
+    @Html.Label("Rol ID")
+    @Html.TextBoxFor(x => x.rol_id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Rol Ad")
+    @Html.TextBoxFor(x => x.rol_ad, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Kaydet</button>
+    <a href="/Ulke/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

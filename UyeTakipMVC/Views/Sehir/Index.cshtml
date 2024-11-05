@@ -1,0 +1,44 @@
+﻿@model IEnumerable<UyeTakipMVC.Models.SehirClass>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        #right {
+            position: absolute;
+            right: 80px;
+        }
+    </style>
+</head>
+
+<h3>Şehirler</h3>
+<div style="float: left">
+    <a href="/Sehir/NewCity" class="btn btn-primary">Yeni Şehir Ekle </a>
+    <a href="/Sehir/ExportToExcel" class="btn btn-success" id="right">Excel Olarak İndir</a>
+</div>
+<br />
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Şehir ID</th>
+            <th>Şehir Ad</th>
+            <th>Plaka Kodu</th>
+            <th>Ülke Ad</th>
+            <th>Düzenle/Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.sehir_id</td>
+                <td>@item.sehir_ad</td>
+                <td>@item.plaka_kodu</td>
+                <td>@item.Ulke.ulke_ad</td>
+                <td> <a href="/Sehir/GetCity/@item.sehir_id" class="btn btn-success"><span class="glyphicon glyphicon-edit" title="Düzenle"></span> </a> <a href="/Sehir/DeleteCity/@item.sehir_id" class="btn btn-danger" onclick="return confirm('Silmek istediğine emin misin?')" title="Sil"><span class="glyphicon glyphicon-remove"></span></a> </td>
+            </tr>
+        }
+    </tbody>
+</table>

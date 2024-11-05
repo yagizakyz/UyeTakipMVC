@@ -1,0 +1,30 @@
+﻿@model UyeTakipMVC.Models.SehirClass
+@{
+    ViewData["Title"] = "GetCity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Şehir Bilgileri</h1>
+<br />
+@using (Html.BeginForm("UpdateCity", "Sehir", FormMethod.Post))
+{
+    @Html.Label("Şehir ID")
+    @Html.TextBoxFor(x => x.sehir_id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Şehir Ad")
+    @Html.TextBoxFor(x => x.sehir_ad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Plaka Kodu")
+    @Html.TextBoxFor(x => x.plaka_kodu, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ülke")
+    @Html.DropDownListFor(x => x.ulke_id, (List<SelectListItem>)ViewBag.ulke, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:darkblue">Kaydet</button>
+    <a href="/Sehir/Index">Geri Dön</a>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
